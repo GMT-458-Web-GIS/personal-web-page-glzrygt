@@ -1,0 +1,465 @@
+
+/* Container for navigation bar */
+.container nav {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space items apart */
+    align-items: center; /* Vertically align items */
+    height: 80px; /* Set height of navbar */
+    padding: 0 50px; /* Add horizontal padding */
+    position: fixed; /* Fix navbar at the top of the page */
+    top: 0; /* Align it to the top */
+    left: 0;
+    right: 0;
+    background: #080808; /* Dark background color */
+    z-index: 1000; /* Make sure the navbar is on top */
+    max-width: 1200px; /* Max width of the navbar */
+    margin: 0 auto; /* Center align navbar */
+}
+
+/* Logo styling */
+.logo {
+    width: 180px; /* Set the logo width */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 10px; /* Add top margin */
+}
+
+/* Header section styling */
+#header {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Space items apart */
+    height: 100vh; /* Full viewport height */
+    padding: 200px 100px 0; /* Add padding around the content */
+}
+
+/* Header title styling */
+.header-text h1 {
+    font-size: 60px; /* Large font size */
+    margin-bottom: 20px; /* Add space below */
+}
+
+/* Header paragraph styling */
+.header-text p {
+    font-size: 24px; /* Set font size */
+    margin-bottom: 10px; /* Add space below */
+}
+
+/* Image in the right section of the header */
+#header .right img {
+    width: 350px; /* Set image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 200px; /* Make image round */
+}
+
+/* Universal reset for all elements */
+* {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-family: 'Poppins', sans-serif; /* Set default font */
+    box-sizing: border-box; /* Include padding and borders in element’s total width and height */
+}
+
+/* Body styling */
+body {
+    background: #080808; /* Dark background */
+    color: #fff; /* White text */
+}
+
+/* Navigation list styling */
+nav ul {
+    display: flex; /* Use flexbox for horizontal layout */
+    list-style: none; /* Remove list bullets */
+}
+
+/* List item styling in navigation */
+nav ul li {
+    margin-left: 100px; /* Add space between items */
+}
+
+/* Links in the navigation */
+nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #fff; /* White text */
+    font-weight: 500; /* Set font weight */
+    font-size: 18px; /* Set font size */
+    position: relative; /* Needed for positioning pseudo-elements */
+    transition: 0.5s; /* Smooth transition for hover effects */
+}
+
+/* Underline effect for links in navigation */
+nav ul li a::after {
+    content: ''; /* No text, just a line */
+    width: 100%; /* Full width of the link */
+    height: 3px; /* Line thickness */
+    background: #ff004f; /* Red color */
+    position: absolute; /* Position it at the bottom */
+    left: 0;
+    bottom: -6px; /* Place it just below the link */
+}
+
+/* Hover effect for navigation links */
+nav ul li a:hover {
+    color: #ff004f; /* Change text color on hover */
+}
+
+/* Header text with color on span */
+.header-text h1 span {
+    color: #ff004f; /* Red color for highlighted text */
+}
+
+/* Left section of the header */
+#header .left {
+    flex: 1; /* Take up equal space */
+}
+
+/* Text styling in the left header section */
+#header .left h1 {
+    font-size: 50px; /* Set font size */
+    margin-bottom: 20px; /* Add space below */
+}
+
+/* Paragraph styling in the left header section */
+#header .left p {
+    font-size: 30px; /* Set font size */
+    margin-bottom: 10px; /* Add space below */
+}
+
+/* Right section of the header */
+#header .right {
+    flex: 1; /* Take up equal space */
+    display: flex;
+    justify-content: center; /* Center the content */
+}
+
+/* About section styling */
+#about {
+  padding: 150px 0; /* Add padding to top and bottom */
+  color: white; /* White text */
+  background: #080808; /* Dark background */
+  text-align: left; /* Align text to the left */
+  overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+/* Container inside the about section */
+#about .container {
+  margin: 0 auto; /* Center the content */
+  padding-left: 100px; /* Add padding on the left */
+}
+
+/* Subtitle inside about section */
+#about .sub-title {
+  font-size: 40px; /* Large font size */
+  font-weight: 600; /* Bold text */
+  margin-bottom: 20px; /* Add space below */
+  color: #fff; /* White text */
+}
+
+/* Paragraph styling inside about section */
+#about p {
+  font-size: 18px; /* Set font size */
+  line-height: 1.6; /* Line height for readability */
+  max-width: 700px; /* Limit the paragraph width */
+}
+
+/* Tab titles styling */
+.tab-titles {
+  display: flex; /* Use flexbox for layout */
+  margin: 20px 0 40px; /* Add margin for spacing */
+}
+
+/* Styling for tab links */
+.tab-links {
+  margin-right: 50px; /* Space between tabs */
+  font-size: 20px; /* Font size */
+  font-weight: 500; /* Font weight */
+  cursor: pointer; /* Show cursor on hover */
+  position: relative; /* Positioning for pseudo-element */
+}
+
+/* Underline effect for tab links */
+.tab-links::after {
+  content: ''; /* No text, just a line */
+  width: 0; /* Start with zero width */
+  height: 3px; /* Line thickness */
+  background: #ff004f; /* Red color */
+  position: absolute; /* Position it at the bottom */
+  left: 0;
+  bottom: -8px; /* Place it just below the link */
+  transition: 0.3s; /* Smooth transition for width change */
+}
+
+/* Active tab link underline effect */
+.tab-links.active-link::after {
+  width: 50%; /* Fill half the width of the tab */
+}
+
+/* Tab content section */
+.tab-contents {
+  display: none; /* Hide by default */
+}
+
+/* Active tab content */
+.tab-contents.active-tab {
+  display: block; /* Show when active */
+}
+
+/* List styling inside about section */
+#about ul {
+  list-style: none; /* Remove list bullets */
+  padding-left: 20px; /* Indentation */
+}
+
+/* List item styling inside about section */
+#about ul li {
+  margin-bottom: 8px; /* Add space below each item */
+  position: relative; /* Needed for icon placement */
+  color: #fff; /* White text */
+  line-height: 1.6; /* Line height for readability */
+}
+
+/* Pink bullet points for specific list items */
+#about ul li:has(.pink)::before {
+  content: "•"; /* Bullet point symbol */
+  color: #ff004f; /* Red color */
+  position: absolute; /* Position it to the left */
+  left: -15px; /* Space it out from the text */
+  font-size: 20px; /* Larger bullet */
+}
+
+/* Styling for elements with the pink class */
+.pink {
+  color: #ff004f; /* Red color */
+  font-weight: 600; /* Bold text */
+}
+
+/* Social media link button styling */
+.social-links a {
+  display: inline-block; /* Inline block for layout */
+  text-decoration: none; /* Remove underline */
+  color: #fff; /* White text */
+  border: 2px solid #ff004f; /* Red border */
+  padding: 12px 24px; /* Padding inside the button */
+  border-radius: 30px; /* Rounded corners */
+  font-weight: 500; /* Medium font weight */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  margin-right: 15px; /* Space between buttons */
+}
+
+/* Hover effect for social media links */
+.social-links a:hover {
+  background: #ff004f; /* Red background */
+  color: #fff; /* White text */
+  transform: scale(1.05); /* Slightly enlarge */
+  box-shadow: 0 0 15px #ff004f; /* Add shadow effect */
+}
+
+/* Placeholder text styling */
+.placeholder {
+  color: gray; /* Gray color */
+  font-size: 18px; /* Font size */
+  margin-top: 20px; /* Space above */
+}
+
+/* Hidden elements */
+.hidden {
+  display: none; /* Hide elements */
+}
+
+/* Active state for navigation links */
+nav ul li a.active {
+  color: #ff004f; /* Red color for active link */
+}
+
+/* Underline effect for active navigation links */
+nav ul li a.active::after {
+  width: 100%; /* Full width of the link */
+}
+
+/* Main page padding */
+.page {
+  padding: 150px 100px 60px; /* Add padding */
+  min-height: calc(100vh - 80px); /* Full page height minus navbar */
+}
+
+/* Project hero section styling */
+.project-hero {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Vertically center items */
+  justify-content: space-between; /* Space items apart */
+  gap: 40px; /* Space between image and text */
+  background: #111; /* Dark background */
+  padding: 60px 100px; /* Padding around the content */
+  border-radius: 20px; /* Rounded corners */
+  margin: 80px auto; /* Center the section */
+  max-width: 1200px; /* Max width */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for project hero */
+.project-hero:hover {
+  transform: scale(1.02); /* Slightly scale up */
+  box-shadow: 0 0 30px #ff004f55; /* Add shadow effect */
+}
+
+/* Project image styling */
+.project-hero img {
+  width: 45%; /* Set image width */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 0 20px #000; /* Add shadow */
+}
+
+/* Project text section styling */
+.project-text {
+  width: 55%; /* Take up 55% width */
+}
+
+/* Project title styling */
+.project-text h2 {
+  font-size: 32px; /* Font size */
+  margin-bottom: 20px; /* Add space below */
+  color: #ff004f; /* Red color */
+}
+
+/* Project description paragraph styling */
+.project-text p {
+  font-size: 18px; /* Font size */
+  line-height: 1.6; /* Line height for readability */
+  color: #ddd; /* Light gray color */
+  margin-bottom: 20px; /* Add space below */
+}
+
+/* Button styling */
+.btn {
+  display: inline-block; /* Inline block for layout */
+  text-decoration: none; /* Remove underline */
+  color: #fff; /* White text */
+  border: 2px solid #ff004f; /* Red border */
+  padding: 10px 22px; /* Padding inside the button */
+  border-radius: 30px; /* Rounded corners */
+  font-weight: 500; /* Medium font weight */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for buttons */
+.btn:hover {
+  background: #ff004f; /* Red background */
+  color: #fff; /* White text */
+  box-shadow: 0 0 15px #ff004f; /* Add shadow effect */
+}
+
+/* Certificates section styling */
+.certificates-section {
+  text-align: center; /* Center the content */
+  padding-top: 150px; /* Padding at the top */
+  max-width: 700px; /* Max width */
+  margin: 0 auto; /* Center the section */
+}
+
+/* Certificate text box styling */
+.cert-text-box {
+  background: #0f0f0f; /* Dark background */
+  border: 1px solid #ff004f; /* Red border */
+  border-radius: 20px; /* Rounded corners */
+  padding: 40px; /* Padding inside the box */
+  box-shadow: 0 0 20px rgba(255, 0, 79, 0.2); /* Soft shadow */
+  margin-top: 40px; /* Space above */
+}
+
+/* Paragraph styling inside certificate text box */
+.cert-text-box p {
+  font-size: 18px; /* Font size */
+  line-height: 1.7; /* Line height */
+  margin-bottom: 20px; /* Add space below */
+}
+
+/* Contact section styling */
+.contact-section {
+  text-align: center; /* Center the content */
+  padding-top: 150px; /* Padding at the top */
+}
+
+/* Contact intro text */
+.contact-intro {
+  font-size: 18px; /* Font size */
+  color: #ccc; /* Light gray text */
+  margin-bottom: 40px; /* Space below */
+}
+
+/* Contact link buttons styling */
+.contact-links {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center the buttons */
+  flex-wrap: wrap; /* Allow wrapping */
+  gap: 20px; /* Space between buttons */
+}
+
+/* Button styling inside contact section */
+.contact-links .btn {
+  min-width: 160px; /* Set a minimum width */
+  text-align: center; /* Center text inside button */
+}
+
+/* Icon styling in contact section */
+.icon {
+  width: 30px; /* Set width of icons */
+  height: 30px; /* Set height of icons */
+  vertical-align: middle; /* Align with text */
+  margin-right: 8px; /* Space between icon and text */
+}
+
+/* Contact links styling */
+.contact-links a {
+  display: inline-flex; /* Use flexbox for icon and text */
+  align-items: center; /* Vertically align items */
+  gap: 8px; /* Space between icon and text */
+  background: #0f0f0f; /* Dark background */
+  color: #fff; /* White text */
+  padding: 12px 20px; /* Padding inside the button */
+  border-radius: 40px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  border: 1px solid #ff004f; /* Red border */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for contact links */
+.contact-links a:hover {
+  background: #ff004f; /* Red background */
+  transform: scale(1.05); /* Slightly enlarge */
+  box-shadow: 0 0 15px #ff004f; /* Add shadow effect */
+}
+/* Map container styling */
+#map {
+  width: 100%;  /* Make the map take the full width */
+  height: 500px;  /* Set a fixed height for the map */
+  border: 2px solid #ff004f;  /* Optional: Add a border around the map */
+  border-radius: 10px;  /* Optional: Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  /* Optional: Add shadow for the map */
+  margin-top: 30px;  /* Optional: Add some space above the map */
+}
+/* General style for the map */
+#map {
+  width: 100%; /* Set the width of the map */
+  height: 500px; /* Set the height of the map */
+  border: 2px solid #ff004f; /* Add a red border around the map */
+  border-radius: 10px; /* Round the corners of the map */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add a shadow around the map */
+  margin-top: 30px; /* Add space between the map and content above it */
+}
+
+/* Style for the fire emoji marker */
+.ol-marker {
+  font-size: 40px; /* Adjust the size of the emoji */
+  color: #ff004f; /* Set the color of the emoji to red */
+  text-align: center; /* Center the emoji */
+  line-height: 1.2; /* Adjust the line height for the emoji */
+}
+
+/* Style for the emoji markers on the map */
+.ol-layer ol-text {
+  font-family: Arial, sans-serif; /* Use Arial font to display the emoji */
+  font-weight: bold; /* Make the emoji text bold */
+}
+
+
+
+
