@@ -12,7 +12,7 @@
   <div class="container">
     <nav>
       <!-- Navigation menu with links to other pages -->
-      <img src="/personal-web-page-glzrygt/public/images/logo.jpg" class="logo" alt="logo">  <!-- Logo image -->
+      <img src="/guluzar-yigit-portfolio/public/images/logo.jpg" class="logo" alt="logo">  <!-- Logo image -->
       <ul>
         <li><a href="index.html" class="active">Home</a></li>  <!-- Link to Home page, with 'active' class indicating it's the current page -->
         <li><a href="#about">About</a></li>  <!-- Link to the "About" section of the page -->
@@ -31,7 +31,7 @@
       <p>Welcome to my portfolio!</p>  <!-- Short welcoming message -->
     </div>
     <div class="right">
-      <img src="/personal-web-page-glzrygt/public/images/mezuniyet.jpg" alt="profile">  <!-- Profile image -->
+      <img src="/guluzar-yigit-portfolio/public/images/mezuniyet.jpg" alt="profile">  <!-- Profile image -->
     </div>
   </div>
 
@@ -112,18 +112,17 @@
   </div>
 
   <script>
-    const tabLinks = document.querySelectorAll(".tab-links");  //<!-- Select all tab links -->
-    const tabContents = document.querySelectorAll(".tab-contents");  //<!-- Select all tab content sections -->
+    const tabLinks = document.querySelectorAll(".tab-links");  <!-- Select all tab links -->
+    const tabContents = document.querySelectorAll(".tab-contents");  <!-- Select all tab content sections -->
+
     function opentab(tabName) {
-      tabLinks.forEach(link => link.classList.remove("active-link"));  //<!-- Remove active state from all links -->
-      tabContents.forEach(content => content.classList.remove("active-tab"));  //<!-- Hide all tab content -->
-      document.querySelector(`[onclick="opentab('${tabName}')"]`).classList.add("active-link");  //<!-- Add active state to clicked tab link -->
-      document.getElementById(tabName).classList.add("active-tab");  //<!-- Show the content of the clicked tab -->
+      tabLinks.forEach(link => link.classList.remove("active-link"));  <!-- Remove active state from all links -->
+      tabContents.forEach(content => content.classList.remove("active-tab"));  <!-- Hide all tab content -->
+      document.querySelector(`[onclick="opentab('${tabName}')"]`).classList.add("active-link");  <!-- Add active state to clicked tab link -->
+      document.getElementById(tabName).classList.add("active-tab");  <!-- Show the content of the clicked tab -->
     }
   </script>
 
 </body>
 </html>
-
-
 
