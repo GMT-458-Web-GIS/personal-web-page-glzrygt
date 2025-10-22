@@ -1,4 +1,3 @@
-
 /* Container for navigation bar */
 .container nav {
     display: flex; /* Use flexbox for layout */
@@ -459,7 +458,6 @@ nav ul li a.active::after {
   font-family: Arial, sans-serif; /* Use Arial font to display the emoji */
   font-weight: bold; /* Make the emoji text bold */
 }
-
 
 
 
